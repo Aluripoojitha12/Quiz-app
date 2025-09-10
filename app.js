@@ -107,7 +107,6 @@ function resetTimer(){ if(!QUESTION_TIME) return;
   clearInterval(timerId); timerId=null; timeLeft=QUESTION_TIME; timerEl.textContent=fmt(timeLeft);
 }
 function fmt(s){return `${String(Math.floor(s/60)).padStart(2,"0")}:${String(s%60).padStart(2,"0")}`;}
-
 /* ====== RESULT ====== */
 function showResult(){
   show("result"); progressBar.style.width="100%";
