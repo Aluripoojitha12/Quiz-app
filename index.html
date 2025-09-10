@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- SPLASH -->
+  <section id="screen-splash" class="screen splash active" aria-labelledby="splash-title">
+    <div class="card">
+      <button class="link-skip" id="btnSkip" aria-label="Skip to quiz">Skip</button>
+      <h1 id="splash-title">Let’s start Quiz!</h1>
+      <p class="muted">
+        Welcome to <b>Genius</b>, the place where knowledge and fun meet.
+        Test your insight with interesting questions.
+      </p>
+      <button id="btnStart" class="primary">Let’s start game</button>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="screen-quiz" class="screen quiz" aria-live="polite">
+    <div class="container">
+      <header class="quiz-header">
+        <div class="quiz-topic">Basic Algebra</div>
+        <div class="spacer"></div>
+        <div class="timer" id="timer" aria-label="Time left">00:40</div>
+      </header>
+
+      <div class="progress">
+        <div id="progressBar" class="bar" style="width:0%"></div>
+      </div>
+
+      <main class="question-area">
+        <div id="qIndex" class="hint"></div>
+        <h2 id="qText" class="qtext"></h2>
+        <div id="options" class="options" role="listbox" aria-label="Answer choices"></div>
+        <button id="btnCheck" class="primary" disabled>Check</button>
+      </main>
+    </div>
+  </section>
+
+  <!-- RESULT -->
+  <section id="screen-result" class="screen result" aria-labelledby="result-title">
+    <div class="container">
+      <div class="card result-card">
+        <h3 id="result-title">Congratulations!</h3>
+        <p id="finalScore" class="big"></p>
+        <div class="badge" aria-hidden="true">🏅</div>
+        <p class="muted" id="result-msg">You earned a badge.</p>
+        <button id="btnHome" class="primary outline">Back to Home</button>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
